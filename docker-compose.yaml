@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  db:
+    image: donutloop/statsy-db:latest
+    build: ./
+    environment:
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+      - MYSQL_DATABASE=statsy
+      - MYSQL_ROOT_PASSWORD=fdsjlfjsdlk
+    ports:
+      - 3306:3306
+    env_file:
+      - services.env
